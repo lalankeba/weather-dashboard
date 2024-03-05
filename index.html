@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Weather Dashboard</h1>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div id="search-container" class="container">
+                <input type="text" id="search-input" placeholder="Enter a city name">
+                <button id="search-button">Search</button>
+            </div>
+        </section>
+        <section>
+            <div id="weather-container" class="container">
+                <h2 id="city-name">Tampere</h2>
+                <p id="temperature">3C</p>
+                <p id="humidity"></p>
+                <p id="wind-speed"></p>
+                <img src="" alt="Weather icon" id="weather-icon">
+            </div>
+        </section>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
