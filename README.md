@@ -1,2 +1,2 @@
-# weather-dashboard
-javascript weather dashboard
+# Weather Dashboard
+Javascript weather dashboard
