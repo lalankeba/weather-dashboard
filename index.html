@@ -8,24 +8,38 @@
 </head>
 <body>
     <header>
-        <div class="container">
+        <div class="container header-container">
             <h1>Weather Dashboard</h1>
         </div>
     </header>
     <main>
         <section>
-            <div id="search-container" class="container">
-                <input type="text" id="search-input" placeholder="Enter a city name">
+            <div id="search-container" class="container search-container">
+                <input id="search-input" type="text"  placeholder="Enter a city name" autocomplete="off">
+                <select id="search-unit">
+                    <option value="metric">Metric</option>
+                    <option value="imperial">Imperial</option>
+                </select>
                 <button id="search-button">Search</button>
             </div>
         </section>
         <section>
             <div id="weather-container" class="container">
-                <h2 id="city-name">Tampere</h2>
-                <p id="temperature">3C</p>
-                <p id="humidity"></p>
-                <p id="wind-speed"></p>
-                <img src="" alt="Weather icon" id="weather-icon">
+                <h2 id="city-name"></h2>
+                <div class="weather-details-container">
+                    <div class="weather-details-left">
+                        <img id="weather-icon" src="" alt="Weather icon">
+                        <p id="temperature"></p>
+                    </div>
+                    <div class="weather-details-right">
+                        <p id="weather-description"></p>
+                        <p id="humidity"></p>
+                        <p id="wind-speed"></p>
+                    </div>
+                </div>
+            </div>
+            <div id="error-container" class="container">
+                <p id="error-description"></p>
             </div>
         </section>
     </main>
