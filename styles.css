@@ -11,6 +11,18 @@
     letter-spacing: 1px;
 }
 
+body {
+    background-image: url(images/sky.jpg);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+main {
+    padding: 12px 0px;
+    background-color: rgba(238, 240, 244, 0.5);
+}
+
 .container {
     margin: 0 auto;
     max-width: 1080px;
@@ -152,6 +164,7 @@ header {
     border-radius: 12px;
     padding: 12px;
     min-width: 80px;
+    background-color: rgb(238, 240, 244);
 }
 
 .forecast-data-container img {
