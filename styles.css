@@ -79,6 +79,10 @@ header {
 
 /* ---------------- weather section ---------------- */
 
+#current-time {
+    font-size: 12px;
+}
+
 #city-name {
     margin: 12px 0px;
     font-size: 32px;
@@ -86,7 +90,7 @@ header {
 
 .weather-details-container {
     display: flex;
-    gap: 20px;
+    gap: 30px;
     margin: 10px 0px;
 }
 
@@ -102,13 +106,14 @@ header {
 
 .weather-details-left p {
     font-size: 28px;
+    font-weight: 700;
     text-align: center;
     margin-top: 8px;
 }
 
-.weather-details-left p {
-    font-weight: 500;
-    font-size: 24px;
+#feels-like {
+    font-size: 14px;
+    font-weight: 400;
 }
 
 .weather-details-right {
@@ -118,5 +123,48 @@ header {
 
 .weather-details-right p {
     margin-bottom: 8px;
+}
+
+#weather-description {
+    font-size: 18px;
+    font-weight: 700;
     text-transform: capitalize;
+}
+
+/* ---------------- forecast section ---------------- */
+
+#forecast-container h2 {
+    margin: 16px 0px;
+}
+
+.forecast-details-container {
+    display: flex;
+    gap: 30px 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: space-between;
+}
+
+.forecast-data-container {
+    border: 1px solid gray;
+    border-radius: 12px;
+    padding: 12px;
+    min-width: 80px;
+}
+
+.forecast-data-container img {
+    margin: auto;
+    display: block;
+}
+
+.forecast-data-container p {
+    font-size: 12px;
+    text-align: center;
+}
+
+.forecast-data-container h4 {
+    font-size: 18px;
+    text-align: center;
 }

@@ -25,21 +25,30 @@
         </section>
         <section>
             <div id="weather-container" class="container">
+                <p id="current-time"></p>
                 <h2 id="city-name"></h2>
                 <div class="weather-details-container">
                     <div class="weather-details-left">
                         <img id="weather-icon" src="" alt="Weather icon">
                         <p id="temperature"></p>
+                        <p id="feels-like"></p>
                     </div>
                     <div class="weather-details-right">
                         <p id="weather-description"></p>
                         <p id="humidity"></p>
                         <p id="wind-speed"></p>
+                        <p id="pressure"></p>
                     </div>
                 </div>
             </div>
             <div id="error-container" class="container">
                 <p id="error-description"></p>
+            </div>
+        </section>
+        <section>
+            <div id="forecast-container" class="container">
+                <h2>Forecast</h2>
+                <div id="forecast-details-container" class="forecast-details-container"></div>
             </div>
         </section>
     </main>
