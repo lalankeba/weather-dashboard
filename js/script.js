@@ -138,26 +138,6 @@ searchInput.addEventListener('keydown', (event) => {
     }
 });
 
-// get current location
-
-const getCurrentLocation = () => {
-    if ("geolocation" in navigator) {
-        navigator.geolocation.getCurrentPosition(successLocationCallback, errorLocationCallback);
-    } else {
-        console.log("geolocation is not available");
-    }
-}
-
-const successLocationCallback = (position) => {
-    const unit = searchUnit.value;
-    getWeatherDataForCoordiates(position.coords.longitude, position.coords.latitude, unit);
-    getForecastDataForCoordiates(position.coords.longitude, position.coords.latitude, unit);
-}
-
-const errorLocationCallback = (error) => {
-    console.log(error);
-}
-
 const getWeatherDataForCoordiates = (longitude, latitude, unit) => {
     if (longitude === undefined || longitude === '' || latitude === undefined || latitude === '') {
         displayError('Enter city name before searching');
@@ -244,6 +224,26 @@ const getForecastUrlForCoordinates = (longitude, latitude, unit) => {
     const appIdParam = `appid=${apiKey}`;
     const url = `${baseForecastUrl}?${lonParam}&${latParam}&${unitParam}&${appIdParam}`;
     return url;
+}
+
+// get current geo location
+const getCurrentLocation = () => {
+    if ("geolocation" in navigator) {
+        navigator.geolocation.getCurrentPosition(successLocationCallback, errorLocationCallback);
+    } else {
+        displayError('Geolocation is not available. Please enter city name and search.');
+    }
+}
+
+const successLocationCallback = (position) => {
+    const unit = searchUnit.value;
+    getWeatherDataForCoordiates(position.coords.longitude, position.coords.latitude, unit);
+    getForecastDataForCoordiates(position.coords.longitude, position.coords.latitude, unit);
+}
+
+const errorLocationCallback = (error) => {
+    console.log(error);
+    displayError('User denied Geolocation. Please enter city name and search.');
 }
 
 getCurrentLocation();
