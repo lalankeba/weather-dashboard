@@ -1,7 +1,8 @@
 const baseUrl = 'https://api.openweathermap.org/data/2.5/weather';
 const baseImageUrl = 'https://openweathermap.org/img/w';
 const baseForecastUrl = 'https://api.openweathermap.org/data/2.5/forecast';
-const apiKey = 'a6c804b5fbd6dfe772e60831dc3b5e4f';
+//const apiKey = 'a6c804b5fbd6dfe772e60831dc3b5e4f';
+import apiKey from "./apikey.js";
 
 const searchBtn = document.getElementById("search-button");
 const searchInput = document.getElementById("search-input");
